@@ -13,6 +13,7 @@ The reason I used a class based method as well as developing some methods that a
 Since no specification was made for what happens when there are the same number of occurrences (Example. "Wow " occurs twice, "Hello" occurs twice, which is returned as Top 10?). Currently this is done randomly through selecting top 10 after sorting by value within `getTopOccurrences`.
 
 #### Usage 
+Assuming you have Python3 installed, there are no dependencies so creating a virtual enviroment and installing dependencies via `pip` is not neccessary. 
 
 Run the included `word_counter.py` file:
 

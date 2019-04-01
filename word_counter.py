@@ -28,10 +28,10 @@ class WordCounter:
         listOfWords = self.fileContentWords
 
         for wordElement in listOfWords:
-            if wordElement in occurrences:
-                occurrences[str(wordElement)] += 1
+            if wordElement in occurrences.keys():
+                occurrences[wordElement] += 1
             else:
-                occurrences[str(wordElement)] = 1
+                occurrences[wordElement.strip()] = 1
 
         # If there are less than 10 words then we don't need to
         # do any further calculation
@@ -64,7 +64,7 @@ class WordCounter:
 
     def __init__(self, filename):
         """
-        :param filename: Filename specifed in command line
+        :param filename: Filename specified in command line
         :type filename: String
         """
         self.filename = filename
@@ -76,7 +76,7 @@ class WordCounter:
 
                 # Assumes that all the words in the text file are separated by words
                 # it then splits them into an array for easy computation in other methods
-                self.fileContentWords = [line.strip().lower() for line in self.fileContent.split(" ") if line != None]
+                self.fileContentWords = [str(line.strip().lower()).replace("\n", "") for line in self.fileContent.split(" ") if line and line != ""]
 
         except IOError:
             print(
