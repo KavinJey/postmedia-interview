@@ -17,7 +17,9 @@ Assuming you have Python3 installed, there are no dependencies so creating a vir
 
 Run the included `word_counter.py` file:
 
-`./word_counter.py textFileToRead.txt`
+`python word_counter.py textFileToRead.txt`
+
+**Make sure the full path is described or the text file is in the directory. There is a sample text file in the directory provided.**
 
 This should give you the output of:
 
